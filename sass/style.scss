@@ -21,6 +21,13 @@ body {
     color: $primary-dark;
 }
 
+nav,
+section,
+footer {
+    width: 110vw;
+    padding: 30px 215px;
+}
+
 .section-title {
     margin: 50px auto;
     display: flex;
@@ -45,8 +52,6 @@ body {
 /* Navigation */
 .navigation {
     height: 700px;
-    width: 110vw;
-    padding: 30px 220px;
     background-image: url('/images/navpic.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -54,6 +59,10 @@ body {
     a {
         text-decoration: none;
     }
+}
+
+.nav-link-container {
+    padding-left: 50px;
 }
 
 .logo {
@@ -106,8 +115,6 @@ body {
 
 /* Services */
 .services-section {
-    padding: 30px 220px;
-    width: 110vw;
     height: 570px;
 
     i {
@@ -152,8 +159,6 @@ body {
 /* Portfolio */
 .portfolio-section {
     background-color: $secondary-light;
-    padding: 30px 220px;
-    width: 110vw;
     height: 1200px;
 }
 
@@ -183,5 +188,37 @@ body {
         margin-top: 0;
         font-size: 15px;
     }
+}
 
+/* Media Container */
+footer {
+    padding-top: 50px;
+
+    p {
+        color: $secondary-dark;
+        font-size: 14px;
+    }
+}
+
+.media-container {
+    padding-left: 70px;
+    display: flex;
+    gap: 12px;
+
+    i {
+        color: $primary-light;
+        background-color: $secondary-dark;
+        font-size: 20px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
 }
