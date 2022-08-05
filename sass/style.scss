@@ -1,0 +1,88 @@
+/* Fonts */
+$logo-font: 'Lobster Two', cursive;
+$header-font: 'Montserrat', sans-serif;
+$content-font: 'Taviraj', serif;
+
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $content-font;
+}
+
+/* Navigation */
+.navigation {
+    height: 700px;
+    width: 110vw;
+    padding: 30px 220px;
+    // background-image: url('https://c.pxhere.com/photos/8a/dd/watch_wallet_glass_pen_phone-98958.jpg!d');
+    background-image: url('/images/navpic.png');
+    background-repeat: no-repeat;
+    // background-position: 50% 20%;
+    background-size: 100% auto;
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+.logo {
+    font-family: $logo-font;
+    font-size: 33px;
+    color: #efd300;
+    padding: 0;
+}
+
+.nav-item {
+    padding-top: 15px;
+}
+
+.nav-link {
+    font-family: $header-font;
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 10px;
+    //to delete
+    border: red 2px solid;
+}
+
+.title-container {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    // to delete
+    border: cyan 2px solid;
+    
+
+    h2 {
+        font-size: 40px;
+        font-style: italic;
+        margin: 0 auto 10px auto;
+    }
+
+    h1 {
+        font-size: 70px;
+        font-family: $header-font;
+        margin: 10px auto 50px auto;
+    }
+
+    .btn {
+        padding: 20px 50px;
+        border-radius: 3px;
+        background-color: #FED136;
+        color: #ffffff;
+        font-family: $header-font;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+// to delete
+.col-6 {
+    border: green solid 2px;
+}
+
