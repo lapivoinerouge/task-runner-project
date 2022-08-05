@@ -3,6 +3,12 @@ $logo-font: 'Lobster Two', cursive;
 $header-font: 'Montserrat', sans-serif;
 $content-font: 'Taviraj', serif;
 
+/* Colors */
+$main-theme: #fed136;
+$primary-text-dark: #000000;
+$secondary-text-dark: #4c4a4a;
+$text-light: #ffffff;
+
 /* Global */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -11,6 +17,28 @@ $content-font: 'Taviraj', serif;
 body {
     margin: 0;
     font-family: $content-font;
+    color: $primary-text-dark;
+}
+
+.section-title {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h1 {
+        font-family: $header-font;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-style: italic;
+        color: $secondary-text-dark;
+        margin-top: 0;
+        font-size: 18px;
+    }
 }
 
 /* Navigation */
@@ -18,10 +46,8 @@ body {
     height: 700px;
     width: 110vw;
     padding: 30px 220px;
-    // background-image: url('https://c.pxhere.com/photos/8a/dd/watch_wallet_glass_pen_phone-98958.jpg!d');
     background-image: url('/images/navpic.png');
     background-repeat: no-repeat;
-    // background-position: 50% 20%;
     background-size: 100% auto;
     
     a {
@@ -32,7 +58,7 @@ body {
 .logo {
     font-family: $logo-font;
     font-size: 33px;
-    color: #efd300;
+    color: $main-theme;
     padding: 0;
 }
 
@@ -43,19 +69,15 @@ body {
 .nav-link {
     font-family: $header-font;
     font-size: 13px;
-    color: #ffffff;
+    color: $text-light;
     margin-top: 10px;
-    //to delete
-    border: red 2px solid;
 }
 
 .title-container {
     margin-top: 180px;
     display: flex;
     flex-direction: column;
-    color: #ffffff;
-    // to delete
-    border: cyan 2px solid;
+    color: $text-light;
     
 
     h2 {
@@ -73,16 +95,56 @@ body {
     .btn {
         padding: 20px 50px;
         border-radius: 3px;
-        background-color: #FED136;
-        color: #ffffff;
+        background-color: $main-theme;
+        color: $text-light;
         font-family: $header-font;
         margin: auto;
         margin-bottom: 10px;
     }
 }
 
-// to delete
-.col-6 {
-    border: green solid 2px;
+/* Services */
+.services-section {
+    padding: 30px 220px;
+    width: 110vw;
+    height: 700px;
+
+    i {
+        color: $main-theme;
+        padding: 10px;
+        font-size: 35px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: $main-theme 3px solid;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    h3 {
+        font-family: $header-font;
+    }
+
+    p {
+        margin-top: 0;
+    }
 }
 
+.service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
+        font-size: 13px;
+        color: $secondary-text-dark;
+    }
+
+}
