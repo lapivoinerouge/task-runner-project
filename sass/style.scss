@@ -24,37 +24,40 @@ body {
 nav,
 section,
 footer {
-    width: 110vw;
-    padding: 30px 215px;
+    padding: 30px 190px;
 }
 
 .section-title {
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
 
     h1 {
         font-family: $header-font;
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 0;
     }
 
     h2 {
         font-style: italic;
         color: $secondary-dark;
-        margin-top: 0;
-        font-size: 18px;
+        font-size: 15px;
+        margin-top: 5px;
     }
 }
 
 /* Navigation */
 .navigation {
-    height: 700px;
+    padding-bottom: 130px;
     background-image: url('/images/navpic.png');
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+
+    .row {
+        align-items: flex-end;
+    }
     
     a {
         text-decoration: none;
@@ -72,10 +75,6 @@ footer {
     padding: 0;
 }
 
-.nav-item {
-    padding-top: 15px;
-}
-
 .nav-link {
     font-family: $header-font;
     font-size: 13px;
@@ -84,38 +83,38 @@ footer {
 }
 
 .title-container {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
+    margin-top: 170px;
+    text-align: center;
     color: $primary-light;
     
 
     h2 {
-        font-size: 40px;
+        font-size: 35px;
         font-style: italic;
-        margin: 0 auto 10px auto;
+        margin: 10px auto 0 auto;
     }
 
     h1 {
-        font-size: 70px;
+        font-size: 65px;
         font-family: $header-font;
-        margin: 10px auto 50px auto;
+        margin: 10px auto 30px auto;
     }
 
     .btn {
+        display: inline-block;
         padding: 20px 50px;
         border-radius: 3px;
         background-color: $main-theme;
         color: $primary-light;
         font-family: $header-font;
-        margin: auto;
-        margin-bottom: 10px;
+        margin: 15px auto;
     }
 }
 
 /* Services */
 .services-section {
-    height: 570px;
+    padding-bottom: 80px;
+    padding-top: 60px;
 
     i {
         color: $main-theme;
@@ -137,11 +136,17 @@ footer {
 
     h3 {
         font-family: $header-font;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     p {
         margin-top: 0;
     }
+}
+
+.services-container {
+    row-gap: 30px;
 }
 
 .service-box {
@@ -158,16 +163,25 @@ footer {
 
 /* Portfolio */
 .portfolio-section {
+    padding-top: 70px;
+    padding-bottom: 50px;
     background-color: $secondary-light;
-    height: 1200px;
+
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
-.portfolio-boxes {
-    row-gap: 60px;
+.portfolio-row {
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 50px;
 }
 
 .portfolio-box {
     background-color: $primary-light;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,9 +204,10 @@ footer {
     }
 }
 
-/* Media Container */
+/* Footer */
 footer {
-    padding-top: 50px;
+    padding-top: 35px;
+    text-align: end;
 
     p {
         color: $secondary-dark;
@@ -201,7 +216,8 @@ footer {
 }
 
 .media-container {
-    padding-left: 70px;
+    align-items: center;
+    justify-content: center;
     display: flex;
     gap: 12px;
 
@@ -209,8 +225,8 @@ footer {
         color: $primary-light;
         background-color: $secondary-dark;
         font-size: 20px;
-        width: 38px;
-        height: 38px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         position: relative;
 
@@ -219,6 +235,72 @@ footer {
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+    }
+}
+
+/* Media */
+@media (max-width: 1280px) {
+    nav,  
+    footer {
+          padding: 30px 80px;
+
+          p {
+              font-size: 12px;
+          }
+      }
+}
+
+@media (max-width: 767px) {
+    nav,
+    footer {
+        padding: 30px 10px;
+    }
+
+    section {
+        padding: 30px 100px;
+    }
+
+    .section-title {
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+    }
+
+    .navigation {
+        .container {
+            max-width: none;
+        }
+    }
+
+    .nav-link-container {
+        a {
+            font-size: 12px;
+        }
+
+        .col {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .title-container {
+        margin-top: 70px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 25px;
         }
     }
 }
